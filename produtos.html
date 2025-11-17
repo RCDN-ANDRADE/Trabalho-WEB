@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Loja</title>
+    <link rel="stylesheet" href="style-p-produtos.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-left">
+        <a href="index.html" class="logo">
+            <img src="logo.jpg" alt="Logo R">
+        </a>
+        </div>
+
+        <div class="header-center">
+            <a href="login.html" class="user-icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="Usuário">
+            </a>
+        </div>
+
+        <div class="header-right">
+            
+            <!-- Ícone de pesquisar -->
+            <div class="search-area">
+                <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" 
+                    alt="Pesquisar" class="search-icon" id="search-btn">
+                
+                <input type="text" id="search-input" class="search-input" placeholder="Buscar produtos...">
+            </div>
+
+        </div>
+    </header>
+
+     <section class="hero">
+        <div class="hero-content">
+            <h1>BARRETOOUTLET</h1>
+            <p>Os melhores produtos com os melhores preços!</p>
+            <!-- Botão das 3 listras (coloque dentro da .hero onde estava o antigo) -->
+            <a id="btn-filtro" class="menu-button" href="javascript:void(0)" aria-label="Abrir filtros">
+                <img src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png" alt="Menu">
+            </a>
+        </div>
+    </section>
+
+<!-- FILTRO HORIZONTAL (cole logo abaixo da section.hero) -->
+    <section id="filtro-area" class="filtro-area" aria-hidden="true">
+    <div class="filtro-container">
+
+        <button class="filtro-btn">Masculino</button>
+        <button class="filtro-btn">Feminino</button>
+        <button class="filtro-btn">Promoções</button>
+        <button class="filtro-btn">Lançamentos</button>
+
+        <div class="dropdown">
+            <button class="dropdown-btn">Infantil ▼</button>
+            <div class="dropdown-menu">
+                <a href="#">Menino</a>
+                <a href="#">Menina</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropdown-btn">Categoria ▼</button>
+            <div class="dropdown-menu">
+                <a href="#" class="option">Roupas</a>
+                <a href="#" class="option">Calçados</a>
+                <a href="#" class="option">Acessórios</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+        <button class="dropdown-btn">Preço ▼</button>
+        <div class="dropdown-menu">
+            <a href="#" class="option">R$0 - R$50</a>
+            <a href="#" class="option">R$50 - R$100</a>
+            <a href="#" class="option">R$100 - R$200</a>
+            <a href="#" class="option">Acima de R$200</a>
+        </div>
+        </div>
+
+        <div class="dropdown">
+        <button class="dropdown-btn">Tamanho ▼</button>
+        <div class="dropdown-menu">
+            <a href="#" class="option">PP</a>
+            <a href="#" class="option">P</a>
+            <a href="#" class="option">M</a>
+            <a href="#" class="option">G</a>
+            <a href="#" class="option">GG</a>
+        </div>
+        </div>
+
+        <div class="dropdown">
+        <button class="dropdown-btn">Ordenar por ▼</button>
+        <div class="dropdown-menu">
+            <a href="#" class="option">Preço ↑</a>
+            <a href="#" class="option">Preço ↓</a>
+            <a href="#" class="option">Mais vendidos</a>
+            <a href="#" class="option">Novidades</a>
+        </div>
+        </div>
+
+        <div class="dropdown">
+        <button class="dropdown-btn">Marca ▼</button>
+        <div class="dropdown-menu">
+            <a href="#" class="option">Nike</a>
+            <a href="#" class="option">Adidas</a>
+            <a href="#" class="option">Puma</a>
+            <a href="#" class="option">Mizuno</a>
+        </div>
+        </div>
+
+    </div>
+    </section>
+
+     
+
+
+
+    <footer>
+    <div class="footer-container">
+
+        <div class="footer-section">
+            <h3>Contato</h3>
+
+            <div class="social-icons">
+
+                <div class="social-icons">
+                    <div class="payment-item" data-tooltip="contato@gmail.com">
+                        <a href="https://www.bing.com/search?qs=AS&pq=gmail&sk=CSYN1&sc=13-5&pglt=547&q=gmail&cvid=38009ce16af84d969fb509e10a0ee905&gs_lcrp=EgRlZGdlKgYIABAAGEAyBggAEAAYQDIGCAEQLhhAMgYIAhAAGEAyBggDEAAYQDIGCAQQABhAMgYIBRAAGEAyBggGEAAYQDIGCAcQABhAMgYICBAAGEDSAQc3NzFqMGoxqAIAsAIA&FORM=ANNTA1&PC=U531"></a>
+                        <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email">
+                    </div>
+                </div>
+
+                <div class="social-icons">
+                    <div class="payment-item"  data-tooltip="(61) 9 8168-7250">
+                        <img src="https://cdn-icons-png.flaticon.com/512/159/159832.png" alt="Telefone">
+                    </div>
+                </div>
+
+                <div class="social-icons" data-tooltip="Instagram">
+                    <div class="payment-item"  data-tooltip="@RCDN">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3955/3955024.png" alt="Instagram">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-section">
+            <h3>Redes Sociais</h3>
+
+            <div class="payment-icons">
+
+                <div class="payment-item" data-tooltip="Facebook">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+                </div>
+
+                <div class="payment-item" data-tooltip="Instagram">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3955/3955024.png" alt="Instagram">
+                </div>
+
+                <a href="https://www.youtube.com/" target="_blank">
+                    <div class="payment-item" data-tooltip="YouTube">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-section">
+            <h3>Formas de Pagamento</h3>
+
+            <div class="payment-icons">
+
+                <div class="payment-item" data-tooltip="Visacard">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa">
+                </div>
+
+                <div class="payment-item" data-tooltip="Mastercard">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard">
+                </div>
+
+                <div class="payment-item" data-tooltip="Pix">
+                    <img src="https://cdn-icons-png.flaticon.com/512/825/825454.png" alt="Pix">
+                </div>
+
+
+                <div class="payment-item" data-tooltip="Boleto">
+                    <img src="https://cdn-icons-png.flaticon.com/512/196/196544.png" alt="Boleto">
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <p class="footer-copy">© 2025 - Minha Loja</p>
+</footer>
+
+<script>
+
+    /*Pesquisar*/
+
+    document.addEventListener("DOMContentLoaded", () => {
+    const searchBtn = document.getElementById("search-btn");
+    const searchInput = document.getElementById("search-input");
+
+    if (!searchBtn || !searchInput) {
+        console.error("ERRO: search-btn ou search-input não encontrados.");
+        return;
+    }
+
+    // Mostrar ao clicar no ícone
+    searchBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        searchInput.classList.add("show");
+        searchInput.focus();
+    });
+
+    // Se clicar fora → esconder
+    document.addEventListener("click", (e) => {
+        if (e.target !== searchInput && e.target !== searchBtn) {
+            searchInput.classList.remove("show");
+        }
+    });
+
+    // ESC → fechar input
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            searchInput.classList.remove("show");
+        }
+    });
+});
+
+
+    
+    /*Filtro*/
+    
+    document.addEventListener("DOMContentLoaded", () => {
+
+    const btn = document.getElementById("btn-filtro");
+    const filtro = document.getElementById("filtro-area");
+
+    if (!btn || !filtro) {
+        console.warn("Botão de filtro ou área de filtro não encontrados.");
+        return;
+    }
+
+    /* ---------------------------------------------------------
+       ABRIR/FECHAR BARRA DE FILTRO
+    --------------------------------------------------------- */
+    btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        filtro.classList.toggle("show");
+        filtro.setAttribute("aria-hidden", !filtro.classList.contains("show"));
+    });
+
+    /* ---------------------------------------------------------
+       DROPDOWNS — abrir 1 por vez
+    --------------------------------------------------------- */
+    document.querySelectorAll(".dropdown-btn").forEach(btnDrop => {
+        btnDrop.addEventListener("click", (ev) => {
+            ev.stopPropagation(); // impede fechar imediatamente
+
+            const parent = btnDrop.parentElement;
+
+            // Fecha todos, menos o clicado
+            document.querySelectorAll(".dropdown.open").forEach(drop => {
+                if (drop !== parent) drop.classList.remove("open");
+            });
+
+            parent.classList.toggle("open");
+        });
+    });
+
+    /* ---------------------------------------------------------
+   SELEÇÃO — apenas UMA opção por dropdown
+    --------------------------------------------------------- */
+    document.querySelectorAll(".dropdown-menu a").forEach(option => {
+        option.addEventListener("click", (ev) => {
+            ev.preventDefault();
+            ev.stopPropagation();
+
+            const menu = option.closest(".dropdown-menu");
+
+            // Remove seleção de todos os outros
+            menu.querySelectorAll("a").forEach(opt => {
+                if (opt !== option) opt.classList.remove("selected");
+            });
+
+            // Seleciona ou desseleciona a opção clicada
+            option.classList.toggle("selected");
+        });
+    });
+
+
+    /* ---------------------------------------------------------
+       FECHAR DROPDOWN AO CLICAR FORA
+    --------------------------------------------------------- */
+    document.addEventListener("click", () => {
+        document.querySelectorAll(".dropdown.open").forEach(d => d.classList.remove("open"));
+    });
+
+    /* ---------------------------------------------------------
+       ESC FECHA FILTRO + DROPDOWNS
+    --------------------------------------------------------- */
+    document.addEventListener("keydown", (ev) => {
+        if (ev.key === "Escape") {
+            filtro.classList.remove("show");
+            document.querySelectorAll(".dropdown.open").forEach(d => d.classList.remove("open"));
+        }
+    });
+
+});
+
+
+</script>
+</body>
+</html>

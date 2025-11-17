@@ -1,0 +1,406 @@
+/* ==========================================================
+   1. CONFIGURAÇÕES GERAIS DO SITE
+   ========================================================== */
+   
+/* Fonte, reset básico e cor de fundo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+
+    /* Para o footer sempre ficar embaixo */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+body {
+    background: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+    background-color: #f5f5f5;
+}
+
+main {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    background: rgba(255, 255, 255, 0); /* opcional */
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* ==========================================================
+   2. HEADER 
+   ========================================================== */
+
+/* HEADER ------------------------------------------------------ */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 10px 30px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Lado esquerdo: logo */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* LOGO */
+.logo {
+    height: 45px;
+    width: auto;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 48px;
+    height: auto;
+    border-radius: 50%; /* se quiser cantos arredondados */
+    background-color: #ffffff00; /* ou outra cor de fundo */
+}
+
+/* Lado direito */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Ícone do usuário no centro */
+.header-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.user-icon img {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    filter: brightness(0) invert(1);
+    transition: 0.3s ease;
+}
+
+.user-icon img:hover {
+    transform: scale(1.1);
+}
+
+.user-icon {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip */
+.user-icon::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -30px; /* distância do ícone */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.2s ease;
+    visibility: hidden;
+}
+
+/* Mostrar tooltip ao passar o mouse */
+.user-icon:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* PESQUISA ---------------------------------------------------- */
+.search-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    width: 26px;
+    cursor: pointer;
+}
+
+.search-input {
+    position: absolute;
+    right: -5px;
+    top: -4px;
+
+    width: 0;
+    opacity: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+
+    transition: 0.25s ease;
+}
+
+/* QUANDO MOSTRA */
+.search-input.show {
+    width: 180px;
+    opacity: 1;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: white;
+}
+
+
+
+
+/* ==========================================================
+   3. HERO (BANNER PRINCIPAL)
+   ========================================================== */
+
+.hero {
+    background: url("https://images.unsplash.com/photo-1542291026-7eec264c27ff") center/cover no-repeat;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 0 0 10px black;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: white;
+    margin: 50px 0;
+    text-shadow: 0 0 10px black;
+}
+
+.menu-button img {
+    width: 30px;
+    height: 30;
+    padding: 5px;
+    background: #333;
+    border-radius: 12px;
+    transition: 0.2s ease;
+}
+
+.menu-button img:hover {
+    transform: scale(1.1);
+    background: rgba(0,0,0,0.75);
+}
+
+/* ==========================================================
+   5. FOOTER
+   ========================================================== */
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 5px 20px;
+    margin-top: auto;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.footer-section {
+    width: 250px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-section p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* COPY */
+.footer-copy {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+
+/* ==========================================================
+   6. ÍCONES DE PAGAMENTO E REDES SOCIAIS
+   ========================================================== */
+
+/* Containers */
+.payment-icons, .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Ícones */
+.payment-item img,
+.social-icons img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+
+    padding: 6px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Hover */
+.payment-icons img:hover,
+.social-icons img:hover {
+    transform: scale(1.15);
+    opacity: 0.85;
+}
+
+/* Tooltip moderno nos ícones */
+.payment-item {
+    position: relative;
+    cursor: pointer;
+}
+
+.payment-item::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+.payment-item:hover::after {
+    opacity: 1;
+    bottom: -45px;
+}
+
+/* ==========================================================
+   7. RESPONSIVIDADE
+   ========================================================== */
+
+@media (max-width: 600px) {
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .payment-icons {
+        justify-content: center;
+    }
+}
+
+/* FILTRO HORIZONTAL - Aparece abaixo da hero */
+.filtro-area {
+    display: none; /* escondido por padrão */
+    background: #fffffff6;
+    padding: 12px 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+    border-bottom: 1px solid #eeeeee00;
+}
+
+/* container inline */
+.filtro-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: nowrap;
+}
+
+/* botões simples */
+.filtro-btn {
+    background: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* dropdown */
+.dropdown { position: relative; }
+.dropdown-btn {
+    background: #333;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background: #fff;
+    min-width: 160px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 60;
+}
+.dropdown-menu a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #333;
+    white-space: nowrap;
+}
+
+/* Quando a opção for selecionada */
+.dropdown-menu a.selected {
+    background: #333;
+    color: #fff;
+    font-weight: bold;
+}
+
+.dropdown-menu a:hover { background:#f2f2f2; }
+
+/* mostrar dropdown quando aberto (classe .open adicionada via JS) */
+.dropdown.open .dropdown-menu { display: block; }
+
+/* mostrar barra quando classe .show aplicada */
+.filtro-area.show { display: block; animation: slideDown 0.22s ease; }
+@keyframes slideDown { from { opacity:0; transform: translateY(-6px);} to { opacity:1; transform:none;} }
+
+/* comportamento visual para mobile: permitir scroll horizontal */
+.filtro-container::-webkit-scrollbar { display:none; }

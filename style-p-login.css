@@ -1,0 +1,173 @@
+/* ===========================
+   RESET E GERAL
+=========================== */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* SEM SCROLL */
+    font-family: Arial, sans-serif;
+}
+
+/* ===========================
+   HEADER FIXO
+=========================== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px; /* DEFINIDO FIXO */
+    background: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    z-index: 1000;
+}
+
+/* Logo */
+.header-left img {
+    width: 48px;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Ícone seguro */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.shield-icon {
+    width: 28px;
+    height: 28px;
+}
+
+.secure-text {
+    font-size: 14px;
+    color: white;
+    opacity: 0.9;
+}
+
+/* ===========================
+   FORMULÁRIO DE CADASTRO
+=========================== */
+.login-container {
+    position: absolute;
+    top: 70px; /* EXATAMENTE O HEADER */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px); /* RESTANTE DA TELA */
+    background: linear-gradient(135deg, #242424, #444);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    width: 360px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    border-radius: 14px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+    color: white;
+    animation: fadeIn 0.4s ease;
+}
+
+/* Animação */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Título */
+.login-box h2 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+/* Labels */
+.login-box label {
+    display: block;
+    margin-top: 12px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Inputs */
+.login-box input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.15);
+    border: none;
+    outline: none;
+    color: white;
+}
+
+/* Botão Entrar */
+.login-box button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    background: #00c853;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background: #00a846;
+}
+
+/* Botão Cadastrar */
+#cadastrar {
+    background: #333;     /* cor que desejar */
+    border: none;
+    color: white;
+}
+
+#cadastrar:hover {
+    background: #3b3838;
+}
+ 
+/* Esqueceu a Senha? */
+.forgot-pass {
+    display: block;
+    margin-top: 12px;
+    text-align: center;
+    font-size: 14px;
+    color: #bbbbbb;
+    text-decoration: none;
+}
+
+.forgot-pass:hover {
+    text-decoration: underline;
+}
+
+/* Link Login */
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-link a {
+    color: #ff3c3c;
+    text-decoration: none;
+}
+.login-link a:hover {
+    text-decoration: underline;
+}
